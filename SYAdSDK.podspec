@@ -80,26 +80,27 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  # 对于本地开发和测试，使用本地路径
-  spec.source       = { :path => "." }
+  # 使用GitHub仓库
+  spec.source       = { :git => "https://github.com/gql19890103/SYAdSDK.git", :tag => spec.version.to_s }
   
-  # 发布到生产环境时，使用下面的配置
-  # spec.source       = { :git => "https://github.com/gql19890103/SYAdSDK.git", :tag => "#{spec.version}" }
-
-
+  # 删除本地构建命令，发布时不需要
+  # spec.prepare_command = <<-CMD
+  #   if [ ! -d "SYAdSDK.xcframework" ]; then
+  #     echo "Building XCFramework for local development"
+  #     xcodebuild archive -scheme SYAdSDK -configuration Release -destination "generic/platform=iOS" -archivePath "build/SYAdSDK-iOS" SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES
+  #     xcodebuild -create-xcframework -framework "build/SYAdSDK-iOS.xcarchive/Products/Library/Frameworks/SYAdSDK.framework" -output "SYAdSDK.xcframework"
+  #   fi
+  # CMD
+  
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
-  #  CocoaPods is smart about how it includes source code. For source files
-  #  giving a folder will include any swift, h, m, mm, c & cpp files.
+  #  CocoaPods is smart about how it includes source code.
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "SYAdSDK", "SYAdSDK/**/*.{h,m}"
-  # spec.exclude_files = "Classes/Exclude"
-
-  # spec.public_header_files = "Classes/**/*.h"
-
+  # 使用XCFramework
+  spec.vendored_frameworks = "SYAdSDK.xcframework"
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -109,10 +110,8 @@ Pod::Spec.new do |spec|
   #  non-essential files like tests, examples and documentation.
   #
 
-  # spec.resource  = "icon.png"
-  spec.resources = 'SYAdSDK/Resources/SYAd.bundle'
-
-  # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
+  # 资源路径
+  spec.resources = "SYAdSDK/Resources/**/*.bundle"
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -130,14 +129,12 @@ Pod::Spec.new do |spec|
                    "CoreTelephony",
                    "CoreGraphics",
                    "CoreText",
-                 
-                    "Foundation",
-                    "UIKit",
-                  
-                    "StoreKit",
-                    "QuartzCore",
-                    "MobileCoreServices",
-                    "WebKit"
+                   "Foundation",
+                   "UIKit",
+                   "StoreKit",
+                   "QuartzCore",
+                   "MobileCoreServices",
+                   "WebKit"
 
   # spec.library   = "iconv"
   spec.libraries = "iconv", "xml2", "z", "sqlite3"
@@ -149,12 +146,14 @@ Pod::Spec.new do |spec|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # spec.requires_arc = true
+  spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
   # spec.dependency 'SDWebImage', '~> 5.0'
   
- 
+  # 设置本地开发时可以直接指定本地库
+  spec.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
+  
 
 end
