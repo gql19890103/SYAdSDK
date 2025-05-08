@@ -87,8 +87,8 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  # 使用XCFramework
-  spec.vendored_frameworks = "TimeAdSDK.xcframework"
+  # 
+  # spec.vendored_frameworks = ""
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
