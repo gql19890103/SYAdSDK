@@ -78,7 +78,8 @@ Pod::Spec.new do |spec|
   #
 
   # 使用GitHub仓库
-  spec.source       = { :git => "https://github.com/gql19890103/TimeAdSDK.git", :tag => "#{spec.version}" }
+    #spec.source       = { :git => "https://github.com/gql19890103/TimeAdSDK.git", :tag => "#{spec.version}" }
+  spec.source       = { :http => "https://github.com/gql19890103/TimeAdSDK/#{spec.version}/TimeAdSDK/TimeAdSDK.zip" }
   
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
