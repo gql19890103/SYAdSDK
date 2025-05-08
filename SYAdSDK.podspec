@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "SYAdSDK"
+  spec.name         = "TCAdSDK"
   spec.version      = "1.0.0"
   spec.summary      = "SYAdSDK 广告源平台"
 
