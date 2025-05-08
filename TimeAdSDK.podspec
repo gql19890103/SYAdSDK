@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-                       TimeAdSDK 是一个提供多种广告形式的移动广告平台，支持多种广告类型和投放形式，便于开发者轻松集成并获取广告收益。
+                         TimeAdSDK 是一个提供多种广告形式的移动广告平台，支持多种广告类型和投放形式，便于开发者轻松集成并获取广告收益。
                        DESC
 
   spec.homepage     = "https://github.com/gql19890103/TimeAdSDK"
@@ -52,10 +52,7 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "huihui_dang" => "1377655697@qq.com" }
-  # Or just: spec.author    = "huihui_dang"
-  # spec.authors            = { "huihui_dang" => "1377655697@qq.com" }
-  # spec.social_media_url   = "https://twitter.com/huihui_dang"
+  spec.author             = "Amy"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -81,7 +78,7 @@ Pod::Spec.new do |spec|
   #
 
   # 使用GitHub仓库
-  spec.source       = { :git => "file:////Users/evan/code/TimeAdSDK", :tag => spec.version.to_s }
+  spec.source       = { :git => "https://github.com/gql19890103/TimeAdSDK.git", :tag => "#{spec.version}" }
   
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -102,7 +99,7 @@ Pod::Spec.new do |spec|
   #
 
   # 资源文件已经包含在XCFramework中，不需要单独指定
-  # spec.resources = ""
+  # spec.resources = "SYAdSDK/Resources/SYAd.bundle"
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
