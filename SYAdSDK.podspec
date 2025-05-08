@@ -81,7 +81,7 @@ Pod::Spec.new do |spec|
   #
 
   # 使用GitHub仓库
-  spec.source       = { :git => "https://github.com/gql19890103/SYAdSDK.git", :tag => spec.version.to_s }
+  spec.source       = { :http => "https://github.com/gql19890103/SYAdSDK.git", :tag => spec.version.to_s }
   
   # 删除本地构建命令，发布时不需要
   # spec.prepare_command = <<-CMD
