@@ -1,0 +1,6 @@
+framework module TimeAdSDK {
+  umbrella header "TimeAdSDK.h"
+  export *
+
+  module * { export * }
+}
