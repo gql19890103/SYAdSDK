@@ -52,7 +52,7 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "huihui_dang" => "1377655697@qq.com" }
+  spec.author             = "Amy"
   # Or just: spec.author    = "huihui_dang"
   # spec.authors            = { "huihui_dang" => "1377655697@qq.com" }
   # spec.social_media_url   = "https://twitter.com/huihui_dang"
@@ -83,15 +83,6 @@ Pod::Spec.new do |spec|
   # 使用GitHub仓库
   spec.source       = { :git => "https://github.com/gql19890103/SYAdSDK.git", :tag => "#{spec.version}" }
   
-  # 删除本地构建命令，发布时不需要
-  # spec.prepare_command = <<-CMD
-  #   if [ ! -d "SYAdSDK.xcframework" ]; then
-  #     echo "Building XCFramework for local development"
-  #     xcodebuild archive -scheme SYAdSDK -configuration Release -destination "generic/platform=iOS" -archivePath "build/SYAdSDK-iOS" SKIP_INSTALL=NO BUILD_LIBRARY_FOR_DISTRIBUTION=YES
-  #     xcodebuild -create-xcframework -framework "build/SYAdSDK-iOS.xcarchive/Products/Library/Frameworks/SYAdSDK.framework" -output "SYAdSDK.xcframework"
-  #   fi
-  # CMD
-  
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  CocoaPods is smart about how it includes source code.
@@ -111,7 +102,7 @@ Pod::Spec.new do |spec|
   #
 
   # 资源路径
-  spec.resources = "SYAdSDK/Resources/**/*.bundle"
+  spec.resources = "SYAdSDK/Resources/SYAd.bundle"
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
