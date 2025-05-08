@@ -102,8 +102,7 @@ Pod::Spec.new do |spec|
   #
 
   # 资源路径
-  spec.resources = "SYAdSDK/Resources/SYAd.bundle"
-
+  # spec.resources = "SYAdSDK/Resources/SYAd.bundle"
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
