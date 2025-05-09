@@ -101,7 +101,7 @@ Pod::Spec.new do |spec|
 
   # 资源文件已经包含在XCFramework中，不需要单独指定
   # spec.resources = "xxx/xxx/SYAd.bundle"
-  spec.resources = ['TimeAdSDK/SYAd.bundle/**/*']
+  # spec.resources = ['TimeAdSDK/SYAd.bundle/**/*']
 
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
