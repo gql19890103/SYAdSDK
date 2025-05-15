@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "TimeAdSDK"
-  spec.version      = "1.0.2"
+  spec.version      = "1.0.3"
   spec.summary      = "TimeAdSDK 广告源平台"
 
   # This description is used to generate tags and improve search results.
@@ -79,7 +79,7 @@ Pod::Spec.new do |spec|
 
   # 使用GitHub仓库
     #spec.source       = { :git => "https://github.com/gql19890103/TimeAdSDK.git", :tag => "#{spec.version}" }
-    spec.source       = { :http => "https://gitee.com/guan-dalong/TimeAdSDK/raw/master/TimeAdSDK.zip" }
+    spec.source       = { :http => "https://gitee.com/guan-dalong/TimeAdSDK/raw/1.0.3/TimeAdSDK.zip" }
   
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
